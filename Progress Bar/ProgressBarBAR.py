@@ -1,11 +1,6 @@
 from progress.bar import Bar
 import nmap
 
-# IP DE TEST :
-# beuchat : 213.186.33.4
-# mbn : 80.247.233.138
-# 0-1024
-
 scanner = nmap.PortScanner()
 
 ip_addr = input("Target IP : ")
