@@ -2,10 +2,6 @@ from threading import Thread
 import nmap
 
 
-# IP DE TEST :
-# beuchat : 213.186.33.4
-# mbn : 80.247.233.138
-
 scanner = nmap.PortScanner()
 
 ip_addr = input("Target IP : ")
