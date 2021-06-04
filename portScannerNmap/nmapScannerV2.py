@@ -2,10 +2,6 @@ import nmap
 # Importation de la lib Bar et de l'objet Bar
 # from progress.bar import Bar
 
-# IP DE TEST :
-# beuchat : 213.186.33.4
-# mbn : 80.247.233.138
-
 # Creation de l'objet
 scanner = nmap.PortScanner()
 # Input ; IP ; Port number
