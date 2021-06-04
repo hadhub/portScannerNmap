@@ -9,8 +9,7 @@ Comming soon:
 - Host discovery
 
 Automatisation :
-- Laisser par défaut la valeur '0-1024 si l'user entre rien
--
+- Put Default value
 
 Design :
 - Progess Bar
