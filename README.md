@@ -12,7 +12,7 @@ Comming soon:
 - [Automation] Put Default value
 - [Automation] Convert hostname to IPV4 format (socket)
 - [Design] Progess Bar
-- [Design] Coulor with Colorama
+- [Design] Color with Colorama
 
 
 ![ScreenShort Scanner](https://user-images.githubusercontent.com/85348372/120866331-f963e200-c58f-11eb-80c9-80baecd3af77.png)
