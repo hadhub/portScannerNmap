@@ -8,6 +8,7 @@ Comming soon:
 
 - [Option] Fast Scan
 - [Option] Host discovery
+- [Option] Intensive Scan
 - [Automation] Put Default value
 - [Automation] Convert hostname to IPV4 format (socket)
 - [Design] Progess Bar
