@@ -4,7 +4,7 @@ Repository for an Nmap Scanner in Python
 
 'pip install nmap'
 
-Comming soon:
+Comming soon :
 
 - [Option] Fast Scan (For V4)
 - [Option] Host discovery (For V4)
