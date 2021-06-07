@@ -1,42 +1,22 @@
-"""
-Fichier de test pour la progress bar : OK
-Affichage propre via cast de list : Ok (80%)
-"""
+# Discovery scan using python-nmap
 import nmap
 from progress.bar import Bar
 
-# IP DE TEST :
-# scanme.nmap.org : 45.33.32.156
-# 0-1024
+# Local IP addr - CIDR
+ip = str(input("Enter the network address : "))
+cidr = str(input("Enter CIDR notation (ex /24) : "))
+host = ip + cidr
 
-Scanner = nmap.PortScanner()
+# Objects
+DiscoveryScanner = nmap.PortScanner()
+BarScan = Bar('Scanning : ', max=3)
 
-ip_addr = input("Enter IP : ")
-port_range = input("Enter a port range (ex : 0-1024) : ")
-print()
-
-# Spinner à faire tourner lors du scan : Scanner.scan(ip_addr, port_range, '-sS')
-
-bar = Bar('Processing', max=3)
+# Progress Bar
 for i in range(3):
-    state = Scanner.scan(ip_addr, port_range, '-sS')
-    bar.next()
-bar.finish()
+    DiscoveryScanner.scan(hosts=host, arguments='-F')
+    BarScan.next()
+BarScan.finish()
 
-
-print()
-print("[+] Scan Information\n")
-print("Target : ", ip_addr)
-print("Ports Scanned : ", port_range)
-print()
-# Affichage sans cast (.state() retourne le status de l'adresse IP en une str)
-ip_status = Scanner[ip_addr].state()
-print("[*] Ip Status : ", ip_status)
-
-# Affichage du protocol utilisé avec * : OK
-protocol_list = Scanner[ip_addr].all_protocols()
-print("[*] Protocol : ", *protocol_list)
-
-# Affichage avec * : OK
-open_port = Scanner[ip_addr]['tcp'].keys()
-print("[*] Open Ports: ", *open_port)
+# Display
+for host in DiscoveryScanner.all_hosts():
+    print(host)
