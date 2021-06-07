@@ -1,22 +1,14 @@
-# Discovery scan using python-nmap
+# Speed Test program of an exec
+import time
 import nmap
-from progress.bar import Bar
 
-# Local IP addr - CIDR
-ip = str(input("Enter the network address : "))
-cidr = str(input("Enter CIDR notation (ex /24) : "))
-host = ip + cidr
+hostname = str(input("[?] Enter hostname : "))
+port_range = str(input("[?] Range port (default value is 0-1024) : "))
 
-# Objects
-DiscoveryScanner = nmap.PortScanner()
-BarScan = Bar('Scanning : ', max=3)
+start = time.perf_counter()
+scanner = nmap.PortScanner()
+scanner.scan(hostname, port_range)
 
-# Progress Bar
-for i in range(3):
-    DiscoveryScanner.scan(hosts=host, arguments='-F')
-    BarScan.next()
-BarScan.finish()
-
-# Display
-for host in DiscoveryScanner.all_hosts():
-    print(host)
+end = time.perf_counter()
+time_elapsed = end - start
+print(time_elapsed)
