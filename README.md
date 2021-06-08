@@ -8,7 +8,6 @@ Comming soon :
 
 - [Option] Fast Scan (For V4)
 - [Option] Host discovery (For V4)
-- [Option] Intensive Scan (For V4)
 
 - [Design] Color with Colorama (For V4)
 - [Optimization] : Code optimization (For V4)
